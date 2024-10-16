@@ -37,7 +37,7 @@
           inherit name;
         };
         modules = [
-          ./configuration.nix
+          ./nixos
           catppuccin.nixosModules.catppuccin
 
           home-manager.nixosModules.home-manager
@@ -52,7 +52,7 @@
             };
             home-manager.users.${username} = {
               imports = [
-                ./home.nix
+                ./home/home.nix
                 catppuccin.homeManagerModules.catppuccin
               ];
             };

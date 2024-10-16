@@ -7,10 +7,10 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ../host/hardware-configuration.nix
+      ../host/graphics
+      ../host/cpu
       ./steam
-      ./graphics
-      ./cpu
     ];
 
   # Bootloader.
