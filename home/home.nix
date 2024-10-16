@@ -1,7 +1,10 @@
-{ config, pkgs, username, ... }:
-
 {
-  imports = [ 
+  config,
+  pkgs,
+  username,
+  ...
+}: {
+  imports = [
     ./alacritty
     ./helix
   ];
@@ -76,12 +79,12 @@
     # networking tools
     mtr # A network diagnostic tool
     iperf3
-    dnsutils  # `dig` + `nslookup`
+    dnsutils # `dig` + `nslookup`
     ldns # replacement of `dig`, it provide the command `drill`
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
+    ipcalc # it is a calculator for the IPv4/v6 addresses
     lshw # show hardware details
 
     # misc
@@ -105,7 +108,7 @@
     hugo # static site generator
     glow # markdown previewer in terminal
 
-    btop  # replacement of htop/nmon
+    btop # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
 

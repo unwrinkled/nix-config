@@ -1,10 +1,14 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, lib, pkgs, username, name, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  username,
+  name,
+  ...
+}: {
   imports = [
     ./steam
   ];
@@ -80,7 +84,7 @@
   };
 
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Setup garbage collection
   nix.gc = {
@@ -97,7 +101,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${name}";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     # packages = with pkgs; [];
   };
 
@@ -114,20 +118,20 @@
   ];
 
   environment.sessionVariables = rec {
-    XDG_CACHE_HOME  = "$HOME/.cache";
+    XDG_CACHE_HOME = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
-    XDG_DATA_HOME   = "$HOME/.local/share";
-    XDG_STATE_HOME  = "$HOME/.local/state";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_STATE_HOME = "$HOME/.local/state";
 
     # Not officially in the specification
-    XDG_BIN_HOME    = "$HOME/.local/bin";
-    PATH = [ 
+    XDG_BIN_HOME = "$HOME/.local/bin";
+    PATH = [
       "${XDG_BIN_HOME}"
     ];
   };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
+    (nerdfonts.override {fonts = ["CascadiaCode"];})
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

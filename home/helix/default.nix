@@ -1,11 +1,13 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.helix = {
     enable = true;
     defaultEditor = true;
 
-    extraPackages = with pkgs; [ wl-clipboard ];
+    extraPackages = with pkgs; [wl-clipboard];
 
     ignores = [
       "build/"
@@ -42,7 +44,7 @@
         insert = {
           j.j = "normal_mode";
         };
-      
+
         normal = {
           C-S = ":buffer-close";
         };
