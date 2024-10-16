@@ -10,14 +10,21 @@
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, ... }@inputs:
-    let
-      system = "x86_64-linux";
-      lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
-      username = "unwrinkled";
-      name = "Georgios Tsoulis";
-    in {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    catppuccin,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    lib = nixpkgs.lib;
+    pkgs = nixpkgs.legacyPackages.${system};
+    username = "unwrinkled";
+    name = "Georgios Tsoulis";
+  in {
+    formatter.${system} = pkgs.alejandra;
+
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
