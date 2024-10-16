@@ -5,13 +5,9 @@
 { config, lib, pkgs, username, name, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ../host/hardware-configuration.nix
-      ../host/graphics
-      ../host/cpu
-      ./steam
-    ];
+  imports = [
+    ./steam
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

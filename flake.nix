@@ -37,6 +37,7 @@
           inherit name;
         };
         modules = [
+          ./hosts/ideapad-laptop
           ./nixos
           catppuccin.nixosModules.catppuccin
 
