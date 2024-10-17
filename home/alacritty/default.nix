@@ -15,9 +15,12 @@
           style = "Regular";
         };
       };
-      window.dimensions = {
-        columns = 150;
-        lines = 45;
+      window = {
+        decorations = "None";
+        dimensions = {
+          columns = 150;
+          lines = 45;
+        };
       };
       colors.draw_bold_text_with_bright_colors = true;
       scrolling.multiplier = 5;
