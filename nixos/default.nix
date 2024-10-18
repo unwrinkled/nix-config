@@ -45,9 +45,6 @@
     LC_TIME = "el_GR.UTF-8";
   };
 
-  # Enable TLP only if power profiles daemon is disabled
-  services.tlp.enable = lib.mkDefault (!config.services.power-profiles-daemon.enable);
-
   # Enable SSD trimming
   services.fstrim.enable = true;
 
