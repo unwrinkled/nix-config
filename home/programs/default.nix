@@ -14,36 +14,48 @@
     accent = "sapphire";
   };
 
-  # basic configuration of git, please change to your own
-  programs.git = {
-    enable = true;
-    userName = "Georgios Tsoulis";
-    userEmail = "geotsoulis@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "main";
+  programs = {
+    bottom.enable = true;
+
+    ripgrep.enable = true;
+    fzf.enable = true;
+    fd.enable = true;
+    eza.enable = true;
+
+    starship.enable = true;
+    zoxide.enable = true;
+
+    bash = {
+      enable = true;
+      enableCompletion = true;
+      bashrcExtra = ''
+        export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
+
+        eval "$(starship init bash)"
+      '';
+
+      # set some aliases, feel free to add more or remove some
+      shellAliases = {
+        ll = "ls -lA";
+      };
     };
-  };
 
-  # starship - an customizable prompt for any shell
-  programs.starship.enable = true;
-
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-    bashrcExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
-
-      eval "$(starship init bash)"
-    '';
-
-    # set some aliases, feel free to add more or remove some
-    shellAliases = {
-      ll = "ls -lA";
+    git = {
+      enable = true;
+      userName = "Georgios Tsoulis";
+      userEmail = "geotsoulis@gmail.com";
+      extraConfig = {
+        init.defaultBranch = "main";
+      };
+      delta.enable = true;
     };
   };
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    # game dev
+    unityhub
+
     # bottles
     bottles
 
@@ -51,18 +63,14 @@
     mangohud
     protonup
 
-    neofetch
+    # social
+    discord
 
     # archives
     zip
     xz
     unzip
     p7zip
-
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-    eza # A modern replacement for ‘ls’
-    fzf # A command-line fuzzy finder
 
     # networking tools
     mtr # A network diagnostic tool
@@ -85,6 +93,7 @@
     gawk
     zstd
     gnupg
+    neofetch
 
     # nix related
     #
