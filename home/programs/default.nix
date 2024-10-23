@@ -24,6 +24,7 @@
 
     starship.enable = true;
     zoxide.enable = true;
+    bat.enable = true;
 
     bash = {
       enable = true;
