@@ -43,7 +43,7 @@
 
     git = {
       enable = true;
-      userName = "Georgios Tsoulis";
+      userName = "unwrinkled";
       userEmail = "geotsoulis@gmail.com";
       extraConfig = {
         init.defaultBranch = "main";
