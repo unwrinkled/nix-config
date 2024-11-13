@@ -4,8 +4,8 @@
   ...
 }: {
   imports = [
-    ./alacritty
-    ./helix
+    ./alacritty.nix
+    ./helix.nix
   ];
 
   catppuccin = {
