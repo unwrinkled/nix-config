@@ -57,6 +57,7 @@
   home.packages = with pkgs; [
     # game dev
     unityhub
+    jetbrains.rider
 
     # bottles
     bottles
