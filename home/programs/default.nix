@@ -124,7 +124,8 @@
     pciutils # lspci
     usbutils # lsusb
 
-    # gnome extensions
+    # gnome
+    dconf-editor
     gnomeExtensions.battery-health-charging
   ];
 }

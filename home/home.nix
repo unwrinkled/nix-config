@@ -13,11 +13,16 @@
 
   dconf = {
     enable = true;
-    settings."org/gnome/shell" = {
-      disable-user-extensions = false;
-      enabled-extensions = with pkgs.gnomeExtensions; [
-        battery-health-charging.extensionUuid
-      ];
+    settings = {
+      "org/gnome/shell" = {
+        disable-user-extensions = false;
+        enabled-extensions = with pkgs.gnomeExtensions; [
+          battery-health-charging.extensionUuid
+        ];
+      };
+      "org/gnome/desktop/peripherals/touchpad" = {
+        middle-click-emulation = true;
+      };
     };
   };
 
