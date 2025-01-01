@@ -128,7 +128,7 @@
   };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["CascadiaCode"];})
+    nerd-fonts.caskaydia-cove
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
