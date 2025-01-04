@@ -118,6 +118,7 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+    powertop
 
     # gnome
     dconf-editor
