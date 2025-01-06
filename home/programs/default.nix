@@ -27,6 +27,12 @@
     zoxide.enable = true;
     bat.enable = true;
 
+    direnv = {
+      enable = true;
+      enableBashIntegration = true;
+      nix-direnv.enable = true;
+    };
+
     bash = {
       enable = true;
       enableCompletion = true;
