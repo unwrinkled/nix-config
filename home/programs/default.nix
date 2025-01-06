@@ -126,6 +126,9 @@
     usbutils # lsusb
     powertop
 
+    # nix tools
+    nix-output-monitor
+
     # gnome
     dconf-editor
     gnomeExtensions.battery-health-charging
