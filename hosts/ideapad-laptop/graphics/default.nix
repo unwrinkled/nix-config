@@ -34,8 +34,4 @@
       nvidiaBusId = "PCI:1:0:0";
     };
   };
-
-  environment.variables = {
-    __EGL_VENDOR_LIBRARY_FILENAMES = "${pkgs.mesa.drivers.outPath}/share/glvnd/egl_vendor.d/50_mesa.json";
-  };
 }
