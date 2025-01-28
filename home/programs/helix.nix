@@ -54,6 +54,14 @@
       language-server.rust-analyzer.config = {
         check.command = "clippy";
       };
+      language-server.nixd.config.nixd = {
+        nixpkgs.expr = "import <nixpkgs> { }";
+        formatting.command = [ "alejandra" ];
+        options = {
+          nixos.expr = "(builtins.getFlake \"github:unwrinkled/nix-config\").nixosConfigurations.nixos.options";
+          # home_manager.expr = "(builtins.getFlake \"github:unwrinkled/nix-config\").homeConfigurations.\"unwrinkled@nixos\".options";
+        };
+      };
     };
   };
 }

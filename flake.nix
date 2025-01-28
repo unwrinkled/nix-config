@@ -35,6 +35,7 @@
         specialArgs = {
           inherit username;
           inherit name;
+          inherit inputs;
         };
         modules = [
           ./hosts/ideapad-laptop

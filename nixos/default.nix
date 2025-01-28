@@ -7,6 +7,7 @@
   pkgs,
   username,
   name,
+  inputs,
   ...
 }: {
   imports = [
@@ -82,6 +83,7 @@
 
   # Enable flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   # Setup garbage collection
   nix.gc = {

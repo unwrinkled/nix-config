@@ -129,6 +129,8 @@
 
     # nix tools
     nix-output-monitor
+    alejandra
+    nixd
 
     # gnome
     dconf-editor
