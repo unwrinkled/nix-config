@@ -109,6 +109,7 @@
     hugo # static site generator
     glow # markdown previewer in terminal
     libreoffice-qt6-fresh
+    obsidian
 
     btop # replacement of htop/nmon
     iotop # io monitoring
