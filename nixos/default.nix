@@ -92,12 +92,6 @@
     accent = "sapphire";
   };
   
-  # Setup garbage collection
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 1w";
-  };
   nix.settings.auto-optimise-store = true;
 
   # Enable touchpad support (enabled default in most desktopManager).

@@ -25,7 +25,11 @@
   };
 
   programs = {
-    nh.enable = true;
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep 5 --keep-since 4d --nogcroots";
+    };
     bottom.enable = true;
 
     ripgrep.enable = true;
