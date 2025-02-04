@@ -85,6 +85,13 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
+  # Enable catppuccin theme to every supported module
+  catppuccin = {
+    enable = true;
+    flavor = "macchiato";
+    accent = "sapphire";
+  };
+  
   # Setup garbage collection
   nix.gc = {
     automatic = true;

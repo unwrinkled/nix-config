@@ -10,6 +10,16 @@
 
   catppuccin = {
     enable = true;
+    cursors = {
+      enable = true;
+      flavor = "macchiato";
+      accent = "sapphire";
+    };
+    gtk = {
+      enable = true;
+      flavor = "macchiato";
+      accent = "sapphire";
+    };
     flavor = "macchiato";
     accent = "sapphire";
   };
