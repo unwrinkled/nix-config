@@ -13,4 +13,7 @@
   };
 
   programs.gamemode.enable = true;
+
+  # enable Xbox One wireless controller
+  hardware.xpadneo.enable = true;
 }
