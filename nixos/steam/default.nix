@@ -16,10 +16,4 @@
 
   # enable Xbox One wireless controller
   hardware.xpadneo.enable = true;
-  hardware.bluetooth.settings = {
-    General = {
-      ControllerMode = "dual";
-      JustWorksRepairing = "confirm";
-    };
-  };
 }
