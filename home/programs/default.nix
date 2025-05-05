@@ -118,6 +118,7 @@
     zstd
     gnupg
     neofetch
+    just
 
     # productivity
     hugo # static site generator
@@ -125,6 +126,7 @@
     libreoffice-qt6-fresh
     obsidian
 
+    # system monitoring
     btop # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
