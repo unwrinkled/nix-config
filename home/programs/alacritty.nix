@@ -16,10 +16,14 @@
         };
       };
       window = {
-        decorations = "None";
+        decorations = "Full";
         dimensions = {
           columns = 150;
           lines = 45;
+        };
+        padding = {
+          x = 6;
+          y = 6;
         };
       };
       colors.draw_bold_text_with_bright_colors = true;
