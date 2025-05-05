@@ -69,6 +69,10 @@
       extraConfig = {
         init.defaultBranch = "main";
       };
+      aliases = {
+        l = "log --oneline";
+        d = "diff";
+      };
       lfs.enable = true;
       delta.enable = true;
     };
