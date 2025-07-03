@@ -101,12 +101,15 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${name}";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "openrazer"];
     # packages = with pkgs; [];
   };
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  # For configuring Razer devices
+  hardware.openrazer.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -115,6 +118,8 @@
 
     wget
     curl
+
+    openrazer-daemon
   ];
 
   environment.sessionVariables = rec {
