@@ -40,6 +40,7 @@
         modules = [
           ./hosts/ideapad-laptop
           ./nixos
+          ./overlays
           catppuccin.nixosModules.catppuccin
 
           home-manager.nixosModules.home-manager
@@ -55,7 +56,7 @@
             home-manager.users.${username} = {
               imports = [
                 ./home/home.nix
-                catppuccin.homeManagerModules.catppuccin
+                catppuccin.homeModules.catppuccin
               ];
             };
           }
