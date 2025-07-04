@@ -85,7 +85,7 @@
     jetbrains.rider
 
     # bottles
-    bottles
+    (bottles.override {removeWarningPopup = true;})
 
     # steam
     mangohud
