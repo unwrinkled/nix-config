@@ -1,5 +1,5 @@
 {...}: {
   nixpkgs.overlays = [
-    (import ./gconf.nix)
+    (import ./unityhub.nix)
   ];
 }
