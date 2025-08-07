@@ -82,6 +82,9 @@
     #media-session.enable = true;
   };
 
+  # Flathub
+  services.flatpak.enable = true;
+
   # Enable flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
