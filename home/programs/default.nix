@@ -80,6 +80,9 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    # minecraft
+    modrinth-app
+    
     # game dev
     unityhub
     jetbrains.rider
