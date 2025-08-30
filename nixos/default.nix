@@ -85,6 +85,17 @@
   # Flathub
   services.flatpak.enable = true;
 
+  # SSH Server
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
+      PermitRootLogin = "no";
+      AllowUsers = [ "unwrinkled" ];
+    };
+  };
+
   # Enable flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
